@@ -6,8 +6,8 @@
 
 # Want to help us make this template better? Share your feedback here: https://forms.gle/ybq9Krt8jtBL3iCk7
 
-ARG TELEGGRAM_TOKEN=""
-ENV BOT_TOKEN=1
+ARG TELEGRAM_TOKEN=""
+ENV BOT_TOKEN=TELEGRAM_TOKEN
 
 ARG DATABASE_CONNECTION=""
 ENV DATABASE_CONNECTION_STRING=DATABASE_CONNECTION
