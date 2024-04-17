@@ -2,7 +2,7 @@ import os
 import dotenv
 
 
-config = dotenv.dotenv_values('.env')
+dotenv.load_dotenv('.env')
 
 
 NAME, PROJECT, DESCRIPTION, DEADLINE, REMOVE = range(5)
@@ -16,5 +16,5 @@ SKIP_DEADLINE_TEXT = 'Skip'
 REMOVE_TASK_TEXT = 'Remove'
 
 
-BOT_TOKEN = config.get('BOT_TOKEN', '')
-DATABASE_CONNECTION_STRING = config.get('DATABASE_CONNECTION_STRING', '')
+BOT_TOKEN = os.environ.get('BOT_TOKEN', '')
+DATABASE_CONNECTION_STRING = os.environ.get('DATABASE_CONNECTION_STRING', '')
