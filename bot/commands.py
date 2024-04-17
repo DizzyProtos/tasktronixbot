@@ -2,7 +2,6 @@ import logging
 from datetime import datetime
 from telegram import Update,  ReplyKeyboardMarkup, ReplyKeyboardRemove, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ContextTypes, CallbackContext, ConversationHandler
-from telegram_bot_calendar import DetailedTelegramCalendar, LSTEP
 from bot.database import session, TaskModel
 from bot.config import NAME, PROJECT, DESCRIPTION, DEADLINE, REMOVE_ACTION, \
                        HELP_TEXT, LIST_TASKS_TEXT, NEW_TASK_TEXT, SKIP_DEADLINE_TEXT, REMOVE_TASK_TEXT
