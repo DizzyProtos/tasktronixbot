@@ -5,18 +5,17 @@
 # https://docs.docker.com/go/dockerfile-reference/
 
 # Want to help us make this template better? Share your feedback here: https://forms.gle/ybq9Krt8jtBL3iCk7
+ARG PYTHON_VERSION=3.11.9
+FROM python:${PYTHON_VERSION}-slim as base
+
+# Prevents Python from writing pyc files.
+ENV PYTHONDONTWRITEBYTECODE=1
 
 ARG TELEGRAM_TOKEN=""
 ENV BOT_TOKEN=${TELEGRAM_TOKEN}
 
 ARG DATABASE_CONNECTION=""
 ENV DATABASE_CONNECTION_STRING=${DATABASE_CONNECTION}
-
-ARG PYTHON_VERSION=3.11.9
-FROM python:${PYTHON_VERSION}-slim as base
-
-# Prevents Python from writing pyc files.
-ENV PYTHONDONTWRITEBYTECODE=1
 
 # Keeps Python from buffering stdout and stderr to avoid situations where
 # the application crashes without emitting any logs due to buffering.
